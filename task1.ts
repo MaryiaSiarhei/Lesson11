@@ -2,31 +2,32 @@
 
 // TASK 1
 
-console.log("A");
+// console.log("A");
 
-setTimeout(() => {
-  console.log("B");
-});
+// setTimeout(() => {
+//   console.log("B");
+// });
 
-setTimeout(() => {
-  const promise = new Promise((resolve) => {
-    console.log("C");
+// setTimeout(() => {
+//   const promise = new Promise((resolve) => {
+//     console.log("C");
 
-    resolve("D");
+//     resolve("D");
 
-    console.log("E");
-  });
+//     console.log("E");
+//   });
 
-  promise.then((value) => {
-    console.log(value);
+//   promise.then((value) => {
+//     console.log(value);
 
-    setTimeout(() => {
-      console.log("F");
-    });
-  });
+//     setTimeout(() => {
+//       console.log("F");
+//     });
+//   });
 
-  console.log("G");
-});
+//   console.log("G");
+// });
+//А, B, C, E, G, D, F
 
 // TASK 2
 
@@ -51,7 +52,9 @@ setTimeout(() => {
 //   }, 0);
 // });
 
-// TASK 3
+// I, G, H, J, L, K
+
+//TASK 3
 
 // Promise.resolve().then(() => console.log(0));
 
@@ -63,6 +66,8 @@ setTimeout(() => {
 //   .then(() => console.log(3))
 //   .then(() => console.log(4))
 //   .then(() => console.log(5));
+
+//0, 1, 3, 2, 4, 5
 
 // TASK 4
 
@@ -87,20 +92,23 @@ setTimeout(() => {
 
 // console.log("p2 =>>", p2);
 
+//Promise creation, 123, End, p2 =>> Promise {<pending>}, Promise resolving, timeout
+
 // TASK 5
 
-// console.log("script start");
+console.log("script start");
 
-// setTimeout(function () {
-//   console.log("setTimeout");
-// }, 0);
+setTimeout(function () {
+  console.log("setTimeout");
+}, 0);
 
-// Promise.resolve()
-//   .then(function () {
-//     console.log("promise1");
-//   })
-//   .then(function () {
-//     console.log("promise2");
-//   });
+Promise.resolve()
+  .then(function () {
+    console.log("promise1");
+  })
+  .then(function () {
+    console.log("promise2");
+  });
 
-// console.log("script end");
+console.log("script end");
+//script start, script end, promise1, promise2, setTimeout
